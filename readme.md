@@ -8,35 +8,36 @@ Look- this isn't really a serious repository.  If you don't know how to install 
 
 1. Clone the repository to a local directory: ```git clone https://github.com/harriscm/PyWordleSolver.git```
 2. Change to the newly created directory: ```cd PyWordleSolver```
-3. Install as a python module: ```python install .```
+3. Install as a python module: ```pip install .```
 4. There is no step 4.
 
 ## Usage
-Run the application, it will print a word (it will use AUDIO, because that is a good first word- it immediately solves your vowel issue).  Put that word into your app, then follow the on screen prompts to tell the solver what your green and yellow letters are.  It will then eliminate words that don't fit the rules and print a new word.  There are 2500 (ish) 5-letter words, but this whittles it down pretty quickly.
+Run the application, it will print a starting word. The default starting word is AESIR, but you can change the behavior with the --start-with flag.  Put that word into your app, then follow the on screen prompts to tell the solver what your green and yellow letters are.  It will then eliminate words that don't fit the rules and print a new word.  There are 12972 5-letter words, but this whittles it down pretty quickly.  One caveat, different Wordle implementations apparently use different lists of valid words.  This is the largest list I have found, but that means sometimes your implementation may complain about an invalid word.  The best thing you can do in that instance is stop play, and restart using the last word you put in the app as the starting word.
 
 ```
 $ pywordle
-Word: AUDIO
+Searching through 12972 for the answer...
+Word: AESIR
 Did I guess correctly? [y/N]: n
-Type audio, but only capitalize the GREEN letters: audio
-Type audio, but only capitlize the YELLOW letters: audiO
-Hmm... well, only 282 words left to try!
-Word: SLOOP
+Type aesir, but only capitalize the GREEN letters [aesir]: aesir
+Type aesir, but only capitlize the YELLOW letters [aesir]: AEsir
+Hmm... well, only 364 words left to try!
+Word: ZOEAE
 Did I guess correctly? [y/N]: n
-Type sloop, but only capitalize the GREEN letters: slOop
-Type sloop, but only capitlize the YELLOW letters: slooP
-Hmm... well, only 13 words left to try!
-Word: PROVE
+Type zoeae, but only capitalize the GREEN letters [zoeae]: zoeaE
+Type zoeae, but only capitlize the YELLOW letters [zoeae]: zoeAe
+Hmm... well, only 107 words left to try!
+Word: DALLE
 Did I guess correctly? [y/N]: n
-Type prove, but only capitalize the GREEN letters: prOve
-Type prove, but only capitlize the YELLOW letters: ProvE
-Hmm... well, only 2 words left to try!
-Word: EPOXY
+Type dalle, but only capitalize the GREEN letters [dalle]: dAllE
+Type dalle, but only capitlize the YELLOW letters [dalle]: daLle
+Hmm... well, only 19 words left to try!
+Word: BAYLE
 Did I guess correctly? [y/N]: n
-Type epoxy, but only capitalize the GREEN letters: EPOxy
-Type epoxy, but only capitlize the YELLOW letters: epoxy
-Hmm... well, only 1 words left to try!
-Word: EPOCH
+Type bayle, but only capitalize the GREEN letters [bayle]: bAylE
+Type bayle, but only capitlize the YELLOW letters [bayle]: bayLe
+Hmm... well, only 5 words left to try!
+Word: LATHE
 Did I guess correctly? [y/N]: y
 Wonderful, I knew I would
 ```

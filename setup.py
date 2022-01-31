@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="PyWordleSolver",
-    version="0.0.1",
+    version="0.0.2",
     description="Silly utility to solve Wordle words",
     author="Chad Harris",
     author_email="charris1@gmail.com",
